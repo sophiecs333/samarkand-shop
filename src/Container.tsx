@@ -1,15 +1,15 @@
 import * as React from 'react';
-import createBrowserRouter from 'react-router-dom';
 
 import './Container.css';
 import logo from './logo.svg';
 
-import { Navbar } from './components/Navbar';
 import { Menubar } from './components/Menubar';
-import { Footer } from './components/Footer';
 import { ItemsCard } from './components/items/ItemsCard';
 import { Items } from './components/items/Items';
+import { Navbar } from './components/Navbar';
+import { Footer } from './components/Footer';
 
+// becomes the home page
 export const Container = () => {
   // not sure if this should be here
   const [item, setItem] = React.useState(Items);
@@ -33,8 +33,12 @@ export const Container = () => {
       <h2>Samarkand Shop</h2>
       <p>To do:</p>
       <ul>
-        <li>add login</li>
+        <li>create routes - DONE</li>
+        <li>add login / register (save in localStorage) - DONE</li>
+        <li>add username in navbar when they are logged in</li>
+        <li>add logout</li>
         <li>add to cart function</li>
+        <li>keep items added to cart from logged out to logged in</li>
         <li>add individual page for each item</li>
         <li>figure out styling</li>
       </ul>

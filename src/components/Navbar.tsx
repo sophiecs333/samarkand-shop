@@ -1,4 +1,8 @@
+import * as React from 'react';
+import { Link } from 'react-router-dom';
+
 import './Navbar.css';
+import { LoginForm } from './LoginForm';
 import logo from '../logo.svg';
 // import shoplogo from '../assets/shoplogo.png';
 
@@ -11,8 +15,9 @@ export const Navbar = () => {
         alt="logo"
       />
       <p>SAMARKAND SHOP (Navbar)</p>
-      <p>login/signup</p>
-      <p>cart placeholder</p>
+      <Link to="/login">login</Link>
+      <Link to="/sign-up">sign up</Link>
+      <Link to="/cart">shopping cart</Link>
     </div>
   );
 };
