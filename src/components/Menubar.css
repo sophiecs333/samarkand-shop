@@ -1,0 +1,20 @@
+.Menubar {
+  align-items: center;
+  border-bottom: 1px solid #808080;
+  /* border-color: 4px, solid, red; */
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 350px;
+  padding-right: 350px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* padding-right: 300px; */
+  /* width: 100%; */
+}
+
+p {
+  color: black;
+  margin: 0;
+  padding: 0;
+}
