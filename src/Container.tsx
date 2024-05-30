@@ -35,8 +35,9 @@ export const Container = () => {
       <ul>
         <li>create routes - DONE</li>
         <li>add login / register (save in localStorage) - DONE</li>
-        <li>add username in navbar when they are logged in</li>
-        <li>add logout</li>
+        <li>add username in navbar when they are logged in - DONE</li>
+        <li>add logout - DONE</li>
+        <li>save users somewhere? </li>
         <li>add to cart function</li>
         <li>keep items added to cart from logged out to logged in</li>
         <li>add individual page for each item</li>

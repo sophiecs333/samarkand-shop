@@ -13,6 +13,9 @@ import { Container } from './Container'; // Becomes the home page
 
 import { LoginForm } from './components/LoginForm';
 import { RegistrationForm } from './components/RegistrationForm';
+import { Logout } from './components/Logout';
+
+// addcontext here if you need to have it also for login and registration form
 
 const App: React.FC = () => {
   return (
@@ -22,6 +25,7 @@ const App: React.FC = () => {
           <Route path="/" element={<Container />} />
           <Route path="/login" element={<LoginForm />} />
           <Route path="/sign-up" element={<RegistrationForm />} />
+          <Route path="/logout" element={<Logout />} />
           {/* <Route path="/about" element={<About />} /> Add About component */}
         </Routes>
       </Router>
