@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 
 export const LoginForm = () => {
+  const [isAuthenticated, setIsAuthenticated] = React.useState(false);
   const {
     register,
     handleSubmit,
@@ -11,11 +12,18 @@ export const LoginForm = () => {
 
   const onSubmit = (data: any) => {
     // @ts-expect-error
-    const userData = JSON.parse(localStorage.getItem(data.email));
+    const userData = JSON.parse(localStorage.getItem('userInformation'));
     if (userData) {
       // getItem can return actual value or null
       if (userData.password === data.password) {
-        console.log(userData.name + ' You Are Successfully Logged In');
+        setIsAuthenticated(true);
+        // @ts-expect-error
+        localStorage.setItem('userLogged', true);
+        console.log(
+          userData.name + ' You Are Successfully Logged In',
+          isAuthenticated
+        );
+        alert(userData.name + ' You Are Successfully Logged In');
       } else {
         console.log('Email or Password is not matching with our record');
       }

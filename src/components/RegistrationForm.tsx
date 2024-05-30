@@ -4,15 +4,19 @@ import { Link } from 'react-router-dom';
 import './RegistrationForm.css';
 
 export const RegistrationForm = () => {
+  const [users, setUsers] = React.useState([]); // [ { firstName: 'John', lastName: 'Doe', email: '
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
+  // const userInformation = 'userInformation';
+
   const onSubmit = (data: any) => {
     localStorage.setItem(
-      data.email,
+      'userInformation',
       JSON.stringify({
         firstName: data.firstName,
         lastName: data.lastName,
@@ -21,8 +25,11 @@ export const RegistrationForm = () => {
       })
     );
     // @ts-expect-error
-    console.log(JSON.parse(localStorage.getItem(data.email)));
+    // setUsers([...users, data]);
+    setUsers((users) => [...users, data]);
   };
+
+  console.log('users', users);
 
   return (
     <>
