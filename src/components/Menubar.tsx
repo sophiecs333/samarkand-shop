@@ -1,18 +1,30 @@
-import './Menubar.css';
-import { Items } from './items/Items';
+import * as React from 'react';
 
-// @ts-expect-error
-export const Menubar = ({ filterItem, menuItems, setItem }) => {
+import './Menubar.css';
+import { StyledButton } from './styled-components/Button';
+import { Items } from './items/Items';
+import { Context } from './Context';
+
+export const Menubar = () => {
+  // use React Context here
+  const { menuItems, filterItem, setItem } = React.useContext(Context);
+
   return (
     <div className="Menubar">
       {menuItems.map((Val: any, id: number) => {
         return (
-          <button key={id} onClick={() => filterItem(Val)}>
+          <StyledButton key={id} onClick={() => filterItem(Val)}>
             {Val.toUpperCase()}
-          </button>
+          </StyledButton>
         );
       })}
-      <button onClick={() => setItem(Items)}>ALL</button>
+      <StyledButton onClick={() => setItem(Items)}>ALL</StyledButton>
     </div>
   );
 };
+
+{
+  /* <button key={id} onClick={() => filterItem(Val)}>
+{Val.toUpperCase()}
+</button> */
+}
