@@ -6,29 +6,55 @@ import {
   Route,
   Link,
   Outlet,
+  BrowserRouter,
 } from 'react-router-dom';
+import { ContextProvider } from './components/Context';
 
 // import './App.css';
 import { Container } from './Container'; // Becomes the home page
-
+import { Navbar } from './components/Navbar';
 import { LoginForm } from './components/LoginForm';
 import { RegistrationForm } from './components/RegistrationForm';
 import { Logout } from './components/Logout';
+import { ItemsGrid } from './components/items/ItemsGrid';
+import { ItemPage } from './components/items/ItemPage';
 
-// addcontext here if you need to have it also for login and registration form
+// add context here if you need to have it also for login and registration form
 
-const App: React.FC = () => {
+// @ts-expect-error
+const App: React.FC = ({ props }) => {
   return (
     <div className="App">
-      <Router>
-        <Routes>
-          <Route path="/" element={<Container />} />
-          <Route path="/login" element={<LoginForm />} />
-          <Route path="/sign-up" element={<RegistrationForm />} />
-          <Route path="/logout" element={<Logout />} />
-          {/* <Route path="/about" element={<About />} /> Add About component */}
-        </Routes>
-      </Router>
+      <ContextProvider>
+        <Router>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  {' '}
+                  <Navbar />
+                  <Container />{' '}
+                </>
+              }
+            />
+            <Route path="/login" element={<LoginForm />} />
+            <Route path="/sign-up" element={<RegistrationForm />} />
+            <Route path="/logout" element={<Logout />} />
+
+            <Route
+              path="/:id"
+              element={
+                <>
+                  <Navbar />
+                  <ItemPage />{' '}
+                </>
+              }
+            />
+            {/* <Route path="/about" element={<About />} /> Add About component */}
+          </Routes>
+        </Router>
+      </ContextProvider>
     </div>
   );
 };
