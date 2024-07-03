@@ -3,29 +3,33 @@ import * as React from 'react';
 import './Container.css';
 import logo from './logo.svg';
 
+import { Context } from './components/Context';
+// import { Navbar } from './components/Navbar';
 import { Menubar } from './components/Menubar';
-import { ItemsCard } from './components/items/ItemsCard';
-import { Items } from './components/items/Items';
-import { Navbar } from './components/Navbar';
+import { ItemsGrid } from './components/items/ItemsGrid';
 import { Footer } from './components/Footer';
 
 // becomes the home page
 export const Container = () => {
   // not sure if this should be here
-  const [item, setItem] = React.useState(Items);
-  const menuItems = [...new Set(Items.map((Val) => Val.type))];
+  // const [item, setItem] = React.useState(Items);
+  // const menuItems = [...new Set(Items.map((Val) => Val.type))];
 
-  const filterItem = (currentType: string) => {
-    const newItem = Items.filter((newVal) => {
-      return newVal.type === currentType;
-    });
-    setItem(newItem);
-  };
+  // const filterItem = (currentType: string) => {
+  //   const newItem = Items.filter((newVal) => {
+  //     return newVal.type === currentType;
+  //   });
+  //   setItem(newItem);
+  // };
+
+  // use React Context here
+  const { item, menuItems, filterItem, setItem } = React.useContext(Context);
 
   return (
     <div className="Container">
-      <Navbar />
+      {/* <Navbar /> */}
       <Menubar
+        // @ts-expect-error
         filterItem={filterItem}
         menuItems={menuItems}
         setItem={setItem}
@@ -38,12 +42,16 @@ export const Container = () => {
         <li>add username in navbar when they are logged in - DONE</li>
         <li>add logout - DONE</li>
         <li>save users somewhere? </li>
+
+        <li>add individual page for each item</li>
         <li>add to cart function</li>
         <li>keep items added to cart from logged out to logged in</li>
-        <li>add individual page for each item</li>
+
         <li>figure out styling</li>
+        <li>add payment option</li>
+        <li>add context</li>
       </ul>
-      <ItemsCard item={item} />
+      <ItemsGrid item={item} />
       <img src={logo} className="App-logo" alt="logo" />
       <p>
         Edit <code>src/App.js</code> and save to reload.
