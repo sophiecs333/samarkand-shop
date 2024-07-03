@@ -11,7 +11,7 @@
     "react-hook-form": "^7.51.4",
     "react-router-dom": "6",
     "react-scripts": "5.0.1",
-    "styled-components": "^6.1.8",
+    "styled-components": "^6.1.11",
     "styled-system": "^5.1.5",
     "web-vitals": "^2.1.4"
   },
@@ -26,6 +26,9 @@
       "react-app",
       "react-app/jest"
     ]
+  },
+  "resolutions": {
+    "styled-components": "^5"
   },
   "browserslist": {
     "production": [
