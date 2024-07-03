@@ -23,6 +23,7 @@ export const Items = [
   {
     id: 1,
     type: 'shoes',
+    title: 'Yellow and Black Shoes',
     url: shoes1,
     name: 'Item 1',
     description: 'Item 1 Description',
@@ -31,6 +32,7 @@ export const Items = [
   {
     id: 2,
     type: 'jewelry',
+    title: 'Silver Brooch with Coral Stones',
     url: jewelry1,
     name: 'Item 2',
     description: 'Item 2 Description',
@@ -39,6 +41,7 @@ export const Items = [
   {
     id: 3,
     type: 'teacups',
+    title: 'Blue and White Teacup',
     url: teacup1,
     name: 'Item 3',
     description: 'Item 3 Description',
@@ -47,6 +50,7 @@ export const Items = [
   {
     id: 4,
     type: 'art',
+    title: 'Caravan Painting',
     url: art1,
     name: 'Item 4',
     description: 'Item 4 Description',
@@ -55,6 +59,7 @@ export const Items = [
   {
     id: 5,
     type: 'shoes',
+    title: 'Red and White Shoes',
     url: shoes2,
     name: 'Item 5',
     description: 'Item 5 Description',
@@ -63,6 +68,7 @@ export const Items = [
   {
     id: 6,
     type: 'jewelry',
+    title: 'Gold Earrings with Blue Stones',
     url: jewelry2,
     name: 'Item 6',
     description: 'Item 6 Description',
@@ -71,6 +77,7 @@ export const Items = [
   {
     id: 7,
     type: 'teacups',
+    title: 'Blue and Turquese Teacup',
     url: teacup2,
     name: 'Item 7',
     description: 'Item 7 Description',
@@ -79,6 +86,7 @@ export const Items = [
   {
     id: 8,
     type: 'art',
+    title: 'Box with Painting',
     url: art2,
     name: 'Item 8',
     description: 'Item 8 Description',
@@ -87,6 +95,7 @@ export const Items = [
   {
     id: 9,
     type: 'shoes',
+    title: 'Black and Brown Shoes',
     url: shoes3,
     name: 'Item 9',
     description: 'Item 9 Description',
@@ -95,6 +104,7 @@ export const Items = [
   {
     id: 10,
     type: 'jewelry',
+    title: 'Silver Earrings with Coral Stones',
     url: jewelry3,
     name: 'Item 10',
     description: 'Item 10 Description',
@@ -103,6 +113,7 @@ export const Items = [
   {
     id: 11,
     type: 'teacups',
+    title: 'Orange and White Teacup',
     url: teacup3,
     name: 'Item 11',
     description: 'Item 11 Description',
@@ -111,6 +122,7 @@ export const Items = [
   {
     id: 12,
     type: 'art',
+    title: 'Painting with Lovers',
     url: art3,
     name: 'Item 12',
     description: 'Item 12 Description',
@@ -119,6 +131,7 @@ export const Items = [
   {
     id: 13,
     type: 'shoes',
+    title: 'Golden Shoes',
     url: shoes4,
     name: 'Item 13',
     description: 'Item 13 Description',
@@ -127,6 +140,7 @@ export const Items = [
   {
     id: 14,
     type: 'jewelry',
+    title: 'Hand and Leaves Earrings',
     url: jewelry4,
     name: 'Item 14',
     description: 'Item 14 Description',
@@ -135,6 +149,7 @@ export const Items = [
   {
     id: 15,
     type: 'teacups',
+    title: 'Dark Blue and White Teacup',
     url: teacup4,
     name: 'Item 15',
     description: 'Item 15 Description',
@@ -143,6 +158,7 @@ export const Items = [
   {
     id: 16,
     type: 'art',
+    title: 'Painting with Musician and Flowers',
     url: art4,
     name: 'Item 16',
     description: 'Item 16 Description',
@@ -151,6 +167,7 @@ export const Items = [
   {
     id: 17,
     type: 'shoes',
+    title: 'Yellow, Orange and White Shoes',
     url: shoes5,
     name: 'Item 17',
     description: 'Item 17 Description',
@@ -159,6 +176,7 @@ export const Items = [
   {
     id: 18,
     type: 'jewelry',
+    title: 'Triangular Earrings with Blue Stones',
     url: jewelry5,
     name: 'Item 18',
     description: 'Item 18 Description',
@@ -167,6 +185,7 @@ export const Items = [
   {
     id: 19,
     type: 'teacups',
+    title: 'White and Red Teacup',
     url: teacup5,
     name: 'Item 19',
     description: 'Item 19 Description',
@@ -175,6 +194,7 @@ export const Items = [
   {
     id: 20,
     type: 'art',
+    title: 'Painting with a Reading Man',
     url: art5,
     name: 'Item 20',
     description: 'Item 20 Description',
